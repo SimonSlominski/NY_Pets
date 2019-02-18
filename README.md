@@ -54,3 +54,18 @@ city - insert here one of the city names that appear in the csv file. You should
 Note: 127.0.0.1 means ‘home’, i.e. this computer. :5000 means ‘port 5000’, which is the port the web server is running on.
 
 ### STEP 5 - Docer
+
+You can run app via Docker. Just follow the next steps:
+
+** 5.1 Build the docker image **
+
+$ docker build -t flask-ny-app:latest .
+
+** 5.2 Run the docker container **
+
+Run the docker container from a created image by:
+
+$ docker run -d -p 5000:5000 flask-ny-app
+
+Once again, open your web browser and enter the URL http://127.0.0.1:5000/api/v1/city
+
